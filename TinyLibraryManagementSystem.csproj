@@ -1,0 +1,166 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{AAFCFDF2-CF11-4F5F-9DF3-841A534C6E76}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>TinyLibraryManagementSystem</RootNamespace>
+    <AssemblyName>TinyLibraryManagementSystem</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.OracleClient" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AdminLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminLogin.Designer.cs">
+      <DependentUpon>AdminLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AdminManagerCreate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminManagerCreate.Designer.cs">
+      <DependentUpon>AdminManagerCreate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="connection.cs" />
+    <Compile Include="ManagerBookSearch.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ManagerBookSearch.Designer.cs">
+      <DependentUpon>ManagerBookSearch.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ManagerDeleteBook.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ManagerDeleteBook.Designer.cs">
+      <DependentUpon>ManagerDeleteBook.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ManagerEditBookInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ManagerEditBookInfo.Designer.cs">
+      <DependentUpon>ManagerEditBookInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ManagerHome.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ManagerHome.Designer.cs">
+      <DependentUpon>ManagerHome.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ManagerList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ManagerList.Designer.cs">
+      <DependentUpon>ManagerList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ManagerLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ManagerLogin.Designer.cs">
+      <DependentUpon>ManagerLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ManagerNewBookEntry.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ManagerNewBookEntry.Designer.cs">
+      <DependentUpon>ManagerNewBookEntry.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UsersForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UsersForm.Designer.cs">
+      <DependentUpon>UsersForm.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="AdminLogin.resx">
+      <DependentUpon>AdminLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminManagerCreate.resx">
+      <DependentUpon>AdminManagerCreate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ManagerBookSearch.resx">
+      <DependentUpon>ManagerBookSearch.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ManagerDeleteBook.resx">
+      <DependentUpon>ManagerDeleteBook.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ManagerEditBookInfo.resx">
+      <DependentUpon>ManagerEditBookInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ManagerHome.resx">
+      <DependentUpon>ManagerHome.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ManagerList.resx">
+      <DependentUpon>ManagerList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ManagerLogin.resx">
+      <DependentUpon>ManagerLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ManagerNewBookEntry.resx">
+      <DependentUpon>ManagerNewBookEntry.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="UsersForm.resx">
+      <DependentUpon>UsersForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
